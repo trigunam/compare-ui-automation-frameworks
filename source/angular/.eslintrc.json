@@ -13,10 +13,9 @@
   "rules": {},
   "overrides": [
     {
-      "files": ["*-test.js", "*.spec.js"],
+      "files": ["*.spec.ts"],
       "rules": {
-        "no-unused-expressions": "off",
-        "no-undef": "off"
+        "no-unused-expressions": "off"
       }
     }
   ]
