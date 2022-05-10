@@ -15,8 +15,9 @@
   "reportUnusedDisableDirectives": true,
   "overrides": [
     {
-      "files": ["*.spec.ts"],
+      "files": ["*.spec.ts", "test.ts"],
       "rules": {
+        "no-unused-vars": "off",
         "no-unused-expressions": "off",
         "no-undef": "off"
       }
