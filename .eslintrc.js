@@ -1,1 +1,3 @@
-export default { extends: "eslint:recommended" };
+module.exports = exports = {
+  extends: "eslint:recommended",
+};
