@@ -106,3 +106,6 @@ dist
 # Others
 .DS_Store
 .history
+
+# Angular
+.angular
