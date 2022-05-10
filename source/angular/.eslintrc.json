@@ -11,11 +11,14 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {},
+  "noInlineConfig": true,
+  "reportUnusedDisableDirectives": true,
   "overrides": [
     {
       "files": ["*.spec.ts"],
       "rules": {
-        "no-unused-expressions": "off"
+        "no-unused-expressions": "off",
+        "no-undef": "off"
       }
     }
   ]
