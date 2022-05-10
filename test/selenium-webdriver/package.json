@@ -7,7 +7,7 @@
     "test": "nodemon test.js"
   },
   "author": "Triguna Mutuguppe Sripathi <triguna.mutuguppe@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "selenium-webdriver": "^4.1.2"
   },
