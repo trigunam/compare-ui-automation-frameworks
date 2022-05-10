@@ -37,8 +37,11 @@ jobs:
       - name: Run ESLint
         run: |
           cd source/angular
-          npx eslint src/ --config .eslintrc.json --ext .ts --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+          npx eslint src/ \
+            --config .eslintrc.json \
+            --ext .js,.jsx,.ts,.tsx \
+            --format @microsoft/eslint-formatter-sarif \
+            --output-file eslint-results.sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
