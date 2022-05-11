@@ -1,0 +1,19 @@
+{
+  "name": "selenium-webdriver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon test.js"
+  },
+  "author": "Triguna Mutuguppe Sripathi <triguna.mutuguppe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "selenium-webdriver": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
