@@ -1,4 +1,8 @@
 import { Builder, Capabilities } from "selenium-webdriver";
+import {
+  PageLoadStrategy,
+  UserPromptHandler,
+} from "selenium-webdriver/lib/capabilities.js";
 
 const urlToTest = "https://compare-ui-automation-frameworks.vercel.app";
 
@@ -13,6 +17,7 @@ const urlToTest = "https://compare-ui-automation-frameworks.vercel.app";
  * @returns Initialized driver instance.
  */
 export async function initializeDriver(webDriver, type) {
+  console.log("Initializing driver: " + webDriver + " " + type);
   // .forBrowser("chrome")
   // .forBrowser("safari")
   const driver = chooseDriver(webDriver, type)
@@ -36,6 +41,7 @@ export async function initializeDriver(webDriver, type) {
  * @returns Instance of a web driver.
  */
 function chooseDriver(webDriver, type) {
+  console.log("chooseDriver: " + type);
   const options = chooseOptions(webDriver, type);
 
   let driver = new Builder();
@@ -56,7 +62,10 @@ function chooseDriver(webDriver, type) {
 }
 
 function addCapabilities() {
-  return new Capabilities();
+  const caps = new Capabilities();
+  caps.setPageLoadStrategy(PageLoadStrategy.EAGER);
+  caps.setAlertBehavior(UserPromptHandler.ACCEPT_AND_NOTIFY);
+  return caps;
 }
 
 /**
@@ -73,6 +82,7 @@ function addCapabilities() {
  * @returns
  */
 function chooseOptions(webDriver, type) {
+  console.log("chooseOptions: " + type);
   // Safari does not support headless mode:
   // https://github.com/SeleniumHQ/selenium/issues/5985#issuecomment-400027169
 
