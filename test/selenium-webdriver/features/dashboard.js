@@ -4,17 +4,17 @@ import { deepEqual, ok } from "assert";
 import { PageObject } from "./pageObject.js";
 
 export class Dashboard extends PageObject {
-  _buttonShare = By.xpath(
-    "/html/body/app-root/div/app-product-list/div[1]/button"
-  );
-
-  _buttonNotify = By.xpath(
-    "/html/body/app-root/div/app-product-list/div[1]/app-product-alerts/p/button"
-  );
-
   constructor(driver) {
     super(driver);
     this.driver = driver;
+
+    this._buttonShare = By.xpath(
+      "/html/body/app-root/div/app-product-list/div[1]/button"
+    );
+
+    this._buttonNotify = By.xpath(
+      "/html/body/app-root/div/app-product-list/div[1]/app-product-alerts/p/button"
+    );
   }
 
   async share() {
