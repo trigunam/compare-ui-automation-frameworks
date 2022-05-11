@@ -1,0 +1,14 @@
+[
+  {
+    "type": "chrome",
+    "selenium": "selenium-webdriver/chrome"
+  },
+  {
+    "type": "safari",
+    "selenium": "selenium-webdriver/safari"
+  },
+  {
+    "type": "firefox",
+    "selenium": "selenium-webdriver/firefox"
+  }
+]

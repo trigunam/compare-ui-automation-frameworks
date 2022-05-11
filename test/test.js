@@ -1,0 +1,27 @@
+import { SeleniumWebDriver } from "./selenium-webdriver/drivers.js";
+import driversJson from "./config/drivers.json" assert { type: "json" };
+
+import { Dashboard } from "./features/dashboard.js";
+
+(async function testAPage() {
+  /**
+   * Initializes the drivers specified in config/drivers.json.
+   */
+  driversJson.forEach(({ selenium, type }) => {
+    new SeleniumWebDriver()
+      .initializeDriver(selenium, type)
+      .then(testDashboard);
+  });
+})();
+
+async function testDashboard(driver) {
+  try {
+    const dashboard = new Dashboard(driver);
+    await dashboard.share();
+    await dashboard.notify();
+  } catch (error) {
+    console.error(error);
+  } finally {
+    driver.quit();
+  }
+}
