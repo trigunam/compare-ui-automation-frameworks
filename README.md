@@ -1,7 +1,8 @@
 # Comparing UI Automation Frameworks
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Build Status](https://github.com/trigunam/compare-ui-automation-frameworks/blob/main/.github/workflows/eslint.yml/badge.svg)](https://github.com/trigunam/compare-ui-automation-frameworks/actions/) [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](CONTRIBUTING.md)
+[![Build Status](https://github.com/trigunam/compare-ui-automation-frameworks/actions/workflows/eslint.yml/badge.svg)](https://github.com/trigunam/compare-ui-automation-frameworks/actions/) [![Deployment Status](https://compare-ui-automation-frameworks-vercel-badge.vercel.app/?app=compare-ui-automation-frameworks-vercel-badge)](https://compare-ui-automation-frameworks.vercel.app/)
+ [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](CONTRIBUTING.md)
 
 User Interface Automation Frameworks undergo a lot of changes due to upgrades possible from Node, JavaScript (via ECMA) and other dependent packages. This brings in a big question to the automation framework on what tool can be used to make sure all the upgrades happening around the JavaScript world work smoothly.
 
