@@ -17,7 +17,7 @@ export class Dashboard extends PageObject {
     );
   }
 
-  async share() {
+  share() {
     return this.verifyAlert(
       this._buttonShare,
       "Angular Getting Started",
@@ -26,7 +26,7 @@ export class Dashboard extends PageObject {
     );
   }
 
-  async notify() {
+  notify() {
     return this.verifyAlert(
       this._buttonNotify,
       "Angular Getting Started",
