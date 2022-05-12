@@ -1,15 +1,15 @@
 import fs from "fs";
 
 export class PageObject {
-  constructor(driver) {
-    this.driver = driver;
+  constructor(webdriver) {
+    this.webdriver = webdriver;
   }
 
   async takeScreenshot(fileName) {
     // Returns base64 encoded string
-    let encodedString = await this.driver.takeScreenshot();
+    let encodedString = await this.webdriver.driver.takeScreenshot();
     await fs.writeFileSync(
-      `./screenshots/${fileName}.png`,
+      `${this.webdriver.appConfig.screenshotsFolder}/${fileName}.png`,
       encodedString,
       "base64"
     );

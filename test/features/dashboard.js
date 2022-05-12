@@ -4,9 +4,9 @@ import { deepEqual, ok } from "assert";
 import { PageObject } from "./pageObject.js";
 
 export class Dashboard extends PageObject {
-  constructor(driver) {
-    super(driver);
-    this.driver = driver;
+  constructor(webdriver) {
+    super(webdriver);
+    this.webDriver = webdriver;
 
     this._buttonShare = By.xpath(
       "/html/body/app-root/div/app-product-list/div[1]/button"
@@ -36,27 +36,29 @@ export class Dashboard extends PageObject {
   }
 
   async verifyAlert(elementToFind, pageTitle, buttonText, alertText) {
-    deepEqual(await this.driver.getTitle(), pageTitle);
+    deepEqual(await this.webdriver.driver.getTitle(), pageTitle);
     this.takeScreenshot(buttonText);
 
-    await this.driver.findElement(elementToFind).then(async (element) => {
-      const elementText = await element.getText();
-      ok(elementText.includes(buttonText));
+    await this.webdriver.driver
+      .findElement(elementToFind)
+      .then(async (element) => {
+        const elementText = await element.getText();
+        ok(elementText.includes(buttonText));
 
-      await element.click();
+        await element.click();
 
-      // Wait for the alert to be displayed
-      await this.driver.wait(until.alertIsPresent());
+        // Wait for the alert to be displayed
+        await this.webdriver.driver.wait(until.alertIsPresent());
 
-      // Store the alert in a variable
-      let alert = await this.driver.switchTo().alert();
+        // Store the alert in a variable
+        let alert = await this.webdriver.driver.switchTo().alert();
 
-      //assert the alert text for equality
-      deepEqual(await alert.getText(), alertText);
+        //assert the alert text for equality
+        deepEqual(await alert.getText(), alertText);
 
-      //Press the OK button
-      await alert.accept();
-    });
+        //Press the OK button
+        await alert.accept();
+      });
     return this;
   }
 }

@@ -25,15 +25,15 @@ export class SeleniumWebDriver extends WebDriver {
 
     // .forBrowser("chrome")
     // .forBrowser("safari")
-    const driver = (await this.chooseDriver(webDriver, type))
+    this.driver = (await this.chooseDriver(webDriver, type))
       .withCapabilities(this.addCapabilities())
       .forBrowser(type)
       .build();
 
-    await driver.manage().window().maximize();
-    await driver.get(this.urlToTest);
+    await this.driver.manage().window().maximize();
+    await this.driver.get(this.appConfig.baseUrl);
 
-    return driver;
+    return this;
   }
 
   /**

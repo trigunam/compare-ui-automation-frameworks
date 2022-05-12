@@ -14,14 +14,14 @@ import { Dashboard } from "./features/dashboard.js";
   });
 })();
 
-async function testDashboard(driver) {
+async function testDashboard(webDriver) {
   try {
-    const dashboard = new Dashboard(driver);
+    const dashboard = new Dashboard(webDriver);
     await dashboard.share();
     await dashboard.notify();
   } catch (error) {
     console.error(error);
   } finally {
-    driver.quit();
+    webDriver.driver.quit();
   }
 }

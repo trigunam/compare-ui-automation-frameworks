@@ -1,6 +1,8 @@
+import appConfig from "../config/app.config.json" assert { type: "json" };
+
 export class WebDriver {
   constructor() {
-    this.urlToTest = "https://compare-ui-automation-frameworks.vercel.app";
+    this.appConfig = appConfig;
   }
 
   async initializeDriver(webDriver, type) {
