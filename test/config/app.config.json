@@ -11,5 +11,6 @@
   "requestTimeout": 5000,
   "responseTimeout": 30000,
   "slowTestThreshold": 10000,
-  "pluginsFile": "cypress/plugins/index.cjs"
+  "pluginsFile": "cypress/plugins/index.cjs",
+  "testFiles": "**/*.{feature,features}"
 }

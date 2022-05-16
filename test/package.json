@@ -1,12 +1,13 @@
 {
-  "name": "selenium-webdriver",
+  "name": "automation-frameworks",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
   "type": "module",
   "scripts": {
     "test": "nodemon test.js",
-    "cypress:open": "TS_NODE_PROJECT=0 ./node_modules/cypress/bin/cypress open --config-file ./config/app.config.json"
+    "cy:open": "TS_NODE_PROJECT=0 ./node_modules/cypress/bin/cypress open --config-file ./config/app.config.json",
+    "cy:run": "TS_NODE_PROJECT=0 ./node_modules/cypress/bin/cypress run --config-file ./config/app.config.json"
   },
   "author": "Triguna Mutuguppe Sripathi <triguna.mutuguppe@gmail.com>",
   "license": "MIT",
@@ -16,6 +17,10 @@
     "selenium-webdriver": "^4.1.2"
   },
   "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "nodemon": "^2.0.16"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
