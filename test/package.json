@@ -5,7 +5,8 @@
   "main": "test.js",
   "type": "module",
   "scripts": {
-    "test": "nodemon test.js"
+    "test": "nodemon test.js",
+    "cypress:open": "TS_NODE_PROJECT=0 ./node_modules/cypress/bin/cypress open --config-file ./config/app.config.json"
   },
   "author": "Triguna Mutuguppe Sripathi <triguna.mutuguppe@gmail.com>",
   "license": "MIT",
