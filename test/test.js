@@ -1,4 +1,5 @@
 import { SeleniumWebDriver } from "./selenium-webdriver/drivers.js";
+import { CypressWebDriver } from "./cypress/drivers.js";
 import driversJson from "./config/drivers.json" assert { type: "json" };
 
 import { Dashboard } from "./features/dashboard.js";
@@ -11,6 +12,7 @@ import { Dashboard } from "./features/dashboard.js";
     new SeleniumWebDriver()
       .initializeDriver(selenium, type)
       .then(testDashboard);
+    new CypressWebDriver().initializeDriver(selenium, type).then(testDashboard);
   });
 })();
 

@@ -1,4 +1,5 @@
 import { WebDriver } from "../webdriver/webDriver.js";
+
 export class CypressWebDriver extends WebDriver {
   constructor() {
     super();
