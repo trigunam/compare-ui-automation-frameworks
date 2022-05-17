@@ -14,14 +14,11 @@
   "dependencies": {
     "assert": "^2.0.0",
     "cypress": "^9.6.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "selenium-webdriver": "^4.1.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.24.0",
-    "@typescript-eslint/parser": "^5.24.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "nodemon": "^2.0.16",
-    "typescript": "^4.6.4"
+    "nodemon": "^2.0.16"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

@@ -8,9 +8,6 @@ class BillingPage {
   getLoginPassword() {
     return cy.get("#password");
   }
-  getLoginPassword() {
-    return cy.get("#password");
-  }
   getLoginButton() {
     return cy.get(".woocommerce-button");
   }

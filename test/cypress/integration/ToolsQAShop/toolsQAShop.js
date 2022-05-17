@@ -25,9 +25,9 @@ Given("I open the Account Page for Tools QA", () => {
   And(
     "I do the assertions for Register Button and Register successfully by entering new password as {string}",
     (NewPassword) => {
-      //homePage.getRegisterButton().should('have.attr','disabled','disabled');
-      //homePage.getRegisterButton().should('be.disabled');
-      //homePage.getPassword().type(NewPassword);
+      homePage.getRegisterButton().should("have.attr", "disabled", "disabled");
+      homePage.getRegisterButton().should("be.disabled");
+      homePage.getPassword().type(NewPassword);
       homePage.getRegisterButton().click();
     }
   );
